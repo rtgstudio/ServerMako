@@ -5,7 +5,13 @@ const pjson = require('./package.json');
 const version = require('./lib/getVersion')
 const inquirer  = require('./lib/inquirer');
 const si = require('systeminformation');
+const mysqlBackup= require('./lib/backup/mysql');
 
+const setDbBackup = async () => {
+  const credentials = await inquirer.askMysqlDbCredentials()
+  console.log(credentials);
+  await mysqlBackup.backup(credentials.hostname,credentials.dbName,credentials.dbuser,credentials.password,credentials.dumpfilename)
+};
 
 
 
@@ -13,6 +19,12 @@ const si = require('systeminformation');
 var argv = require('minimist')(process.argv.slice(2));
    if(argv._[0] =='version'){  
     version.getVersion();
+   }
+
+   else if(argv._[0]=='backup'){
+     if(argv.add){
+      setDbBackup()
+     }
    }
    else{
 
@@ -36,9 +48,5 @@ var argv = require('minimist')(process.argv.slice(2));
 
  
 
-// const run = async () => {
-//     const credentials = await inquirer.askGithubCredentials();
-//     console.log(credentials);
-//   };
-  
+
 //   run();
