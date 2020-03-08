@@ -1,0 +1,21 @@
+{
+  "name": "servermako-cli",
+  "version": "1.0.0",
+  "description": "Servermako Cli",
+  "main": "./build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node .",
+    "compile":"tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtgstudio/ServerMako-CLI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rtgstudio/ServerMako-CLI/issues"
+  },
+  "homepage": "https://github.com/rtgstudio/ServerMako-CLI#readme"
+}
