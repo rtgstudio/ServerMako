@@ -5,8 +5,8 @@
   "main": "./build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node .",
-    "compile":"tsc"
+    "start": "node .",
+    "compile": "tsc"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/rtgstudio/ServerMako-CLI/issues"
   },
-  "homepage": "https://github.com/rtgstudio/ServerMako-CLI#readme"
+  "homepage": "https://github.com/rtgstudio/ServerMako-CLI#readme",
+  "dependencies": {
+    "log-to-file": "^2.0.2"
+  }
 }
